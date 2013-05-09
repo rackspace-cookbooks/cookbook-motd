@@ -1,42 +1,24 @@
 motd Cookbook
 =============
-This cookbook will set the motd for linux systems.
+- This cookbook will set the motd for linux systems.
+- Based on the [motd-cookbook][https://github.com/opscode-cookbooks/motd-tail]
 
 Requirements
 ------------
-#### Platforms/operating systems
-- `ubuntu`,`redhat | centos`
+#### Platform Families
+- `debian`,`rhel`
 
 #### Other Cookbooks
 - `motd-tail` - Provides motd for ubuntu based systems
 
 Attributes
 ----------
-TODO: List you cookbook attributes here.
-
-e.g.
-#### motd::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['motd']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+- `node['motd-tail']['additional_text']` - Additional text to add to the end
+  of the motd.tail (e.g. unauthorized access banner).
 
 Usage
 -----
 #### motd::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
 Just include `motd` in your node's `run_list`:
 
 ```json
@@ -47,12 +29,12 @@ Just include `motd` in your node's `run_list`:
   ]
 }
 ```
+Testing
+-------
+TODO: Add testing 
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write you change
@@ -62,4 +44,11 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Author:: Ryan Richard ryan.richard@rackspace.com
+
+Copyright:: 2013, Rackspace, US Inc
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
