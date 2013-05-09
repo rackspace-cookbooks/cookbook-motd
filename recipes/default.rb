@@ -17,9 +17,9 @@
 # limitations under the License.
 #
 
-case node["platform"]
+case node["platform_family"]
 when "debian"
-	include_recipe "motd"
+	include_recipe "motd-tail"
 when "rhel"
 	#TODO: add motd template
 end

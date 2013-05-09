@@ -6,4 +6,4 @@ description      'Installs/Configures motd'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
-depends "motd-tail"
+depends "motd-tail", ">= 1.2.0"
