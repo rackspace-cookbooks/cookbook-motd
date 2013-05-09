@@ -1,8 +1,9 @@
 #
+# Author:: John Dewey (<john@dewey.ws>)
 # Cookbook Name:: motd
 # Recipe:: default
 #
-# Copyright 2013, Rackspace, Us Inc.
+# Copyright 2012, John Dewey
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,15 +18,4 @@
 # limitations under the License.
 #
 
-case node["platform_family"]
-when "debian"
-	include_recipe "motd-tail"
-when "rhel"
-	template "/etc/motd" do
-  	source "motd.erb"
-  	group  "root"
-  	owner  "root"
-  	mode   00644
-  	backup 0
-end
-end
+default['motd']['additional_text'] = nil

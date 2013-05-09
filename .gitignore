@@ -1,3 +1,4 @@
+Cheffile.lock
 metadata.json
 .vagrant
 Berksfile.lock
@@ -8,6 +9,7 @@ Berksfile.lock
 .*.sw[a-z]
 *.un~
 /cookbooks
+/tmp
 
 # Bundler
 Gemfile.lock
