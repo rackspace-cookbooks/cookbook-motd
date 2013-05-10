@@ -1,7 +1,7 @@
 motd Cookbook
 =============
 - This cookbook will set the motd for linux systems.
-- Based on the [motd-cookbook][https://github.com/opscode-cookbooks/motd-tail]
+- Based on the motd-cookbook[https://github.com/opscode-cookbooks/motd-tail]
 
 Requirements
 ------------
