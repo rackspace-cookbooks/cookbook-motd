@@ -1,3 +1,2 @@
-site github: "rackspace-cookbooks/"
-
 metadata
+cookbook "motd-tail", github: "rackspace-cookbooks/motd-tail"
