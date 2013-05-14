@@ -6,6 +6,6 @@ description      'Installs/Configures motd'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.1'
 
-recipe			  "motd", "Updates/adds motd file based on platform family with useful node data"
+recipe		  "motd", "Updates/adds motd file based on platform family with useful node data"
 
 depends "motd-tail", ">= 1.2.0"
