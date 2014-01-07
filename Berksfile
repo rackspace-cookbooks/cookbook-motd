@@ -1,4 +1,5 @@
 metadata
+
 cookbook "motd-tail", github: "rackspace-cookbooks/motd-tail"
 
 group :integration do
