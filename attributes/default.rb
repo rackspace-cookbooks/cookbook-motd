@@ -18,4 +18,4 @@
 # limitations under the License.
 #
 
-default['motd']['additional_text'] = nil
+default[:rackspace_motd][:additional_text] = nil

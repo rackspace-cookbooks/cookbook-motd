@@ -1,7 +1,7 @@
 motd Cookbook
 =============
 - This cookbook will set the motd for linux systems.
-- Based on the [motd-cookbook](https://github.com/opscode-cookbooks/motd-tail)
+- Orignally based on the [motd-cookbook](https://github.com/opscode-cookbooks/motd-tail)
 
 Requirements
 ------------
@@ -9,38 +9,32 @@ Requirements
 - `debian`,`rhel`
 
 #### Other Cookbooks
-- `motd-tail` - Provides motd for ubuntu based systems
+- `rackspace_motd_tail` - Provides motd for ubuntu based systems
 
 Attributes
 ----------
-- `node['motd-tail']['additional_text']` - Additional text to add to the end
-  of the motd.tail (e.g. unauthorized access banner).
+- `default[:rackspace_motd][:additional_text]` - Additional text to add to the end of the motd.tail (e.g. unauthorized access banner).
 
 Usage
 -----
 #### motd::default
-Just include `motd` in your node's `run_list`:
+Just include `rackspace_motd` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[motd]"
+    "recipe[rackspace_motd]"
   ]
 }
 ```
 Testing
 -------
-TODO: Add testing 
+Please see testing section of the [contributing](https://github.com/rackspace-cookbooks/contributing/blob/master/CONTRIBUTING.md) guide.
 
 Contributing
 ------------
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write you change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+Please see testing section of the [contributing](https://github.com/rackspace-cookbooks/contributing/blob/master/CONTRIBUTING.md) guide.
 
 License and Authors
 -------------------

@@ -16,8 +16,8 @@ Roles and Recipes:
 <% node['recipes'].each do |recipe| -%>
   Recipe: <%= recipe %>
 <% end -%>
-<% if node['tags'] && !node['tags'].empty? -%>
 
+<% if node['tags'] && !node['tags'].empty? -%>
 Tags:
 <% node['tags'].each do |tag| -%>
   <%= tag %>
@@ -25,4 +25,4 @@ Tags:
 <% end -%>
 ***
 
-<%= node['motd']['additional_text'] %>
+<%= node[:rackspace_motd][:additional_text] %>

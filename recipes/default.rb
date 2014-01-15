@@ -18,14 +18,14 @@
 #
 
 case node["platform_family"]
-when "debian"
+  when "debian"
 	include_recipe "motd-tail"
-when "rhel"
+  when "rhel"
 	template "/etc/motd" do
   	source "motd.erb"
   	group  "root"
   	owner  "root"
   	mode   00644
   	backup 0
-end
+  end
 end
