@@ -6,6 +6,4 @@ description      'Installs/Configures motd'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '1.0.0'
 
-recipe		  "default.rb", "Updates/adds motd file based on platform family with useful node data"
-
-depends "rackspace_motd_tail", "~> 2.0"
+recipe "default.rb", "Updates/adds motd file based on platform family with useful node data"

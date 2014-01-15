@@ -8,12 +8,10 @@ Requirements
 #### Platform Families
 - `debian`,`rhel`
 
-#### Other Cookbooks
-- `rackspace_motd_tail` - Provides motd for ubuntu based systems
-
 Attributes
 ----------
 - `default[:rackspace_motd][:additional_text]` - Additional text to add to the end of the motd.tail (e.g. unauthorized access banner).
+- `default[:rackspace_motd][:templates_cookbook]` - Specifies the location of the motd.erb template
 
 Usage
 -----
