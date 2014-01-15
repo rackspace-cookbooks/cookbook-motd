@@ -19,13 +19,14 @@
 
 case node["platform_family"]
   when "debian"
-	include_recipe "motd-tail"
+	  include_recipe "motd-tail"
   when "rhel"
-	template "/etc/motd" do
-  	source "motd.erb"
-  	group  "root"
-  	owner  "root"
-  	mode   00644
-  	backup 0
-  end
+	  template "/etc/motd" do
+      cookbook node[:rackspace_motd][:templates_cookbook]
+  	  source "motd.erb"
+  	  group  "root"
+  	  owner  "root"
+  	  mode   00644
+  	  backup 0
+    end
 end
