@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: motd
+# Cookbook Name:: rackspace_motd
 # Recipe:: default
 #
 # Copyright 2013, Rackspace, Us Inc.
