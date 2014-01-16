@@ -36,7 +36,8 @@ Please see testing section of the [contributing](https://github.com/rackspace-co
 
 License and Authors
 -------------------
-Author:: Ryan Richard ryan.richard@rackspace.com
+Author:: Ryan Richard (ryan.richard@rackspace.com)
+Author:: John Dewey (<john@dewey.ws>)
 
 Copyright:: 2013, Rackspace, US Inc
 

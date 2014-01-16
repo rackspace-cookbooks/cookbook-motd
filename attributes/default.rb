@@ -1,6 +1,5 @@
 #
-# Author:: John Dewey (<john@dewey.ws>)
-# Cookbook Name:: motd
+# Cookbook Name:: rackspace_motd
 # Recipe:: default
 #
 # Copyright 2012, John Dewey
