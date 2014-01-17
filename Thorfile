@@ -38,7 +38,8 @@ class Default < Thor
     rescue => e
       say "Untagging: #{current_version} due to error", :red
       sh_with_excode "git tag -d #{current_version}"
-      say e, :red
+      say e , :red
+      say "Increase your version in metadata.rb", :red
       exit 1
     end
 
