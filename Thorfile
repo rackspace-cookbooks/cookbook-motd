@@ -14,7 +14,7 @@ class Default < Thor
       exit 1
     end
 
-    tag_version { publish_cookbook(options) }
+    tag_version
     
   end
 
