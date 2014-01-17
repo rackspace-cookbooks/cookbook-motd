@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: rackspace_motd
-# Recipe:: default
+# Recipe:: debian.rb
 #
 # Copyright 2014, Rackspace, Us Inc.
 #
@@ -17,16 +17,11 @@
 # limitations under the License.
 #
 
-case node[:platform_family]
-  when "debian"
-    include_recipe "rackspace_motd::debian"   
-  else
-    template "/etc/motd" do
-        cookbook node[:rackspace_motd][:templates_cookbook]
-        source "motd.erb"
-        group  "root"
-        owner  "root"
-        mode   00644
-        backup 0
-    end
+template "/etc/motd.tail" do
+    cookbook node[:rackspace_motd][:templates_cookbook]
+    source "motd.erb"
+    group  "root"
+    owner  "root"
+    mode   00644
+    backup 0
 end
