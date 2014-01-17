@@ -13,6 +13,9 @@ class Default < Thor
       say "There are files that need to be committed first.", :red
       exit 1
     end
+
+    tag_version { publish_cookbook(options) }
+    
   end
 
 
