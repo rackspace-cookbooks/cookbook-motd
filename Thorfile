@@ -1,4 +1,5 @@
 # encoding: utf-8
+# Thorfile heavily based on RiotGames(https://github.com/RiotGames/rbenv-cookbook/blob/master/Thorfile). Thanks Guys!
 
 require 'bundler'
 require 'bundler/setup'
@@ -15,7 +16,7 @@ class Default < Thor
     end
 
     tag_version
-    
+
   end
 
 
