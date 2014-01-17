@@ -17,11 +17,11 @@
 # limitations under the License.
 #
 
-template "/etc/motd.tail" do
-    cookbook node[:rackspace_motd][:templates_cookbook]
-    source "motd.erb"
-    group  "root"
-    owner  "root"
-    mode   00644
-    backup 0
+template '/etc/motd.tail' do
+  cookbook node[:rackspace_motd][:templates_cookbook]
+  source 'motd.erb'
+  group  'root'
+  owner  'root'
+  mode   00644
+  backup 0
 end

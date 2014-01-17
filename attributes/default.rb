@@ -18,4 +18,4 @@
 #
 
 default[:rackspace_motd][:additional_text] = nil
-default[:rackspace_motd][:templates_cookbook] = "rackspace_motd"
+default[:rackspace_motd][:templates_cookbook] = 'rackspace_motd'
