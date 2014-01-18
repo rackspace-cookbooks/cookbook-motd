@@ -1,15 +1,15 @@
 require 'spec_helper'
 
 describe 'rackspace_motd::default' do
+  let(:file) { '/etc/motd' }
 
-  context 'platform family - rhel' do
-    let(:file) { '/etc/motd' }
+  let(:chef_run) do
+    ChefSpec::Runner.new do |node|
+      node.set[:rackspace_motd][:additional_text] = 'some additional text'
+    end.converge(described_recipe)
+  end
 
-    let(:chef_run) do
-      ChefSpec::Runner.new do |node|
-        node.set[:rackspace_motd][:additional_text] = 'some additional text'
-      end.converge(described_recipe)
-    end
+  #context 'platform family - rhel' do
 
     it 'creates /etc/motd' do
       expect(chef_run).to create_template(file)
@@ -23,8 +23,17 @@ describe 'rackspace_motd::default' do
     )
     end
 
-    it 'writes /etc/motd with additional text' do
-      expect(chef_run).to render_file(file).with_content('some additional text')
+  #end
+
+  #context 'template expectations' do    
+
+    it 'should contain node name' do
+      expect(chef_run).to render_file(file).with_content('foo')
     end
-  end
+
+    it 'writes /etc/motd with additional text' do
+      expect(chef_run).to render_file(file).with_content('some additiona text')
+    end
+
+  #end
 end
