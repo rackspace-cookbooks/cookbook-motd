@@ -20,3 +20,4 @@ bin/*
 # Test Kitchen 1.0
 .kitchen/
 .kitchen.local.yml
+.coverage/
