@@ -18,7 +18,7 @@
 #
 
 template '/etc/motd.tail' do
-  cookbook node[:rackspace_motd][:templates_cookbook]
+  cookbook node['rackspace_motd']['templates_cookbook']
   source 'motd.erb'
   group  'root'
   owner  'root'

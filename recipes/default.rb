@@ -17,12 +17,12 @@
 # limitations under the License.
 #
 
-case node[:platform_family]
+case node['platform_family']
 when 'debian'
   include_recipe 'rackspace_motd::debian'
 else
   template '/etc/motd' do
-    cookbook node[:rackspace_motd][:templates_cookbook]
+    cookbook node['rackspace_motd']['templates_cookbook']
     source 'motd.erb'
     group  'root'
     owner  'root'
